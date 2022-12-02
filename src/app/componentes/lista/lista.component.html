@@ -1,0 +1,15 @@
+<p>Alumnos</p>
+<div >
+    <ul>
+        <p  *ngFor="let nombreAlumno of alumnos" > 
+            <li appMydirective *ngIf="mostrar" [ngClass]="nombreAlumno.length>0 ? 'listas' : 'faltantes' "> {{nombreAlumno}}</li>
+        </p> 
+    </ul>
+</div>
+
+<button (click)="mostrar=true"> Mostrar lista</button>
+<br>
+<button (click)="mostrar=false"> Ocultar todo</button>
+<br>
+<button (click)="eliminarvacios1() "> Eliminar vacios</button>
+<br>
